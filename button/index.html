@@ -27,6 +27,7 @@
         <div class="result" v-if="result">{{ input.result }}</div>
         <a href="https://www.espn.com" target="_blank">{{ input.linkName }}</a>
         <a href="{{ input.link }}" target="_blank">{{ input.linkName }}</a>
+        <button class="button" v-on:click="goToLink">{{ input.linkName }}</button>
         <a href={{ input.link }} target="_blank">{{ input.linkName }}</a>
         <a href={{ """ + input.link + """ }} target="_blank">{{ input.linkName }}</a>
         <a href={{ """" + input.link + """" }} target="_blank">{{ input.linkName }}</a>
