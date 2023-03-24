@@ -27,19 +27,28 @@ function handleError(err) {
   data.status = String(err).replace(/^Error: /, '');
 }
 
-async function applyActions() {
-  data.results = "Working...";
-  try {
-    await grist.docApi.applyUserActions(data.input.actions);
+// async function applyActions() {
+//   data.results = "Working...";
+//   try {
+//     await grist.docApi.applyUserActions(data.input.actions);
+//     data.message = 'Done';
+//   } catch (e) {
+//     data.message = `Please grant full access for writing. (${e})`;
+//   }
+// }
+
+async function goToLink() {
+   try {
+    await window.open(data.input.link, '_blank');
     data.message = 'Done';
   } catch (e) {
     data.message = `Please grant full access for writing. (${e})`;
   }
 }
 
-async function goToLink() {
+async function goToLinkTwo() {
    try {
-    await window.open(data.input.link, '_blank');
+    await window.open(data.input.linkTwo, '_blank');
     data.message = 'Done';
   } catch (e) {
     data.message = `Please grant full access for writing. (${e})`;
