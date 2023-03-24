@@ -27,15 +27,15 @@ function handleError(err) {
   data.status = String(err).replace(/^Error: /, '');
 }
 
-// async function applyActions() {
-//   data.results = "Working...";
-//   try {
-//     await grist.docApi.applyUserActions(data.input.actions);
-//     data.message = 'Done';
-//   } catch (e) {
-//     data.message = `Please grant full access for writing. (${e})`;
-//   }
-// }
+async function applyActions() {
+  data.results = "Working...";
+  try {
+    await grist.docApi.applyUserActions(data.input.actions);
+    data.message = 'Done';
+  } catch (e) {
+    data.message = `Please grant full access for writing. (${e})`;
+  }
+}
 
 async function goToLink() {
    try {
