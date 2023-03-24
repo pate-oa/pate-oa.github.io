@@ -23,14 +23,8 @@
       </div>
       <template v-else>
         <div class="description">{{ input.description }}</div>
-        <button class="button" v-on:click="applyActions">{{ input.button }}</button>
-        <div class="result" v-if="result">{{ input.result }}</div>
-        <a href="https://www.espn.com" target="_blank">{{ input.linkName }}</a>
-        <a href="{{ input.link }}" target="_blank">{{ input.linkName }}</a>
+        <div class="result" v-if="result">{{ input.result }}</div>>
         <button class="button" v-on:click="goToLink">{{ input.linkName }}</button>
-        <a href={{ input.link }} target="_blank">{{ input.linkName }}</a>
-        <a href={{ """ + input.link + """ }} target="_blank">{{ input.linkName }}</a>
-        <a href={{ """" + input.link + """" }} target="_blank">{{ input.linkName }}</a>
       </template>
     </div>
   </body>
