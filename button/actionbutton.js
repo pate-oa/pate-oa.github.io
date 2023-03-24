@@ -35,6 +35,15 @@ async function applyActions() {
   }
 }
 
+async function goToLink() {
+   try {
+    await window.open(data.input.link, '_blank');
+    data.message = 'Done';
+  } catch (e) {
+    data.message = `Please grant full access for writing. (${e})`;
+  }
+}
+
 function onRecord(row, mappings) {
   try {
     data.status = '';
