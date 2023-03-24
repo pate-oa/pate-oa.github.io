@@ -16,7 +16,9 @@ let data = {
     button: null,
     actions: null,
     link: null,
-    linkName: null
+    linkName: null,
+    linkTwo: null,
+    linkTwoName: null
   }
 }
 
